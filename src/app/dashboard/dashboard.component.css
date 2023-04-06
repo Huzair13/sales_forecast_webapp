@@ -1,0 +1,505 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li + li {
+  margin-left: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  color: #0077b6;
+}
+
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.hero {
+  /* flex: 1; */
+  float: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  position: relative;
+  width: 700px;
+  height: 620px;
+  background-image: url('gif_dashboard.gif');
+  background-size: 100% 100%;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+
+/* .hero p{
+  position: absolute;
+  top: 1;
+  left: 0;
+  margin: 20px;
+} */
+
+.hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  object-fit: cover;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+
+.upload {
+  /* flex: 1; */
+  margin-top: 25px;
+  width: 50%;
+  float: right;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  background-color: #ffffff;
+}
+
+.upload h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.upload p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.upload select {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #faee6a;
+}
+
+.upload .number{
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #faee6a;
+}
+
+
+.file-upload-label {
+  display: flex;
+  color: black;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border: 2px dashed #0077b6;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.file-upload-label:hover {
+  border-color: #fff;
+  background-color: #0077b6;
+}
+
+.file-upload-label img {
+  width: 20%;
+  margin-right: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.file-upload-label span {
+  font-size: 1.25rem;
+  color: #000000;
+}
+
+
+.forecast {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-color: #fff;
+}
+
+.forecast h1 {
+font-size: 2.5rem;
+margin-bottom: 2rem;
+text-align: center;
+color: #0077b6;
+}
+
+.forecast img {
+width: 40%;
+margin-right: 2rem;
+}
+
+.forecast form {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.forecast input[type="file"] {
+display: none;
+}
+
+.forecast .upload {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 2rem;
+}
+
+.forecast .upload label {
+padding: 1rem 2rem;
+border-radius: 0.25rem;
+background-color: #0077b6;
+color: #fff;
+font-size: 1.25rem;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+}
+
+.forecast .upload label:hover {
+background-color: #fff;
+color: #0077b6;
+border: 2px solid #0077b6;
+}
+
+.forecast .dropdown {
+margin-bottom: 2rem;
+}
+
+.forecast select {
+padding: 0.5rem;
+border-radius: 0.25rem;
+background-color: #f2f2f2;
+border: none;
+width: 100%;
+max-width: 400px;
+font-size: 1.25rem;
+appearance: none;
+cursor: pointer;
+}
+
+.forecast input[type="text"] {
+width: 100%;
+max-width: 400px;
+padding: 0.5rem;
+margin-bottom: 2rem;
+border: none;
+border-radius: 0.25rem;
+background-color: #f2f2f2;
+}
+
+.forecast button {
+padding: 0.5rem 1rem;
+border: none;
+border-radius: 0.25rem;
+background-color: #0077b6;
+color: #fff;
+font-size: 1.25rem;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+}
+
+.forecast button:hover {
+background-color: #fff;
+color: #0077b6;
+border: 2px solid black;
+}
+
+.upload-button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.upload-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.upload-button:focus {
+  outline: none;
+}
+
+.upload-button:active {
+  transform: translateY(0px);
+  box-shadow: none;
+}
+
+/* Animations */
+
+@keyframes pulse {
+0% {
+  transform: scale(1);
+}
+50% {
+  transform: scale(1.05);
+}
+100% {
+  transform: scale(1);
+}
+}
+
+@keyframes spin {
+0% {
+  transform: rotate(0deg);
+}
+100% {
+  transform: rotate(360deg);
+}
+}
+
+
+  /* Navigation bar container */
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Navigation links */
+  .navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  /* Add background color to the active/current link */
+  .navbar a.active {
+    background-color: #4CAF50;
+  }
+  
+  .navbar a.active {
+    background-color: #F5BA41; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navbar a.active:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 10px rgba(255, 249, 78, 0.3);
+  }
+  
+  .navbar a.active:focus {
+    outline: none;
+  }
+  
+  .navbar a.active:active {
+    transform: translateY(0px);
+    box-shadow: none;
+  }
+
+  /* Add a logout menu */
+  .dropdown {
+    float: right;
+    overflow: hidden;
+  }
+  
+  .dropdown .logout {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown:hover .logout {
+    display: block;
+  }
+  
+  .logout a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .logout a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive navigation bar */
+  @media screen and (max-width: 768px) {
+    /* Navigation links */
+    .navbar a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+
+    
+    /* Add a logout menu */
+    .dropdown {
+      float: none;
+      display: block;
+    }
+    
+    .dropdown .logout {
+      position: static;
+    }
+      }
+
+    @media screen and (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+        .menu-toggle {
+          display: block;
+        }
+        .hero {
+          padding: 1rem;
+          max-width: 100%;
+          height: auto;
+        }
+
+    }
+
+    /* .output .p{
+      text-align: center;
+      align-items: center;
+      font-family: cursive;
+      font-size: 20px;
+    } */
+
+    .output .canvas{
+      bottom: 0;
+      position: flex;
+    }
+
+    img[src^="data:image/"] {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+
+
+    /* .floating-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+    
+    .floating-btn button {
+      background-color: #009688;
+      color: white;
+      border: none;
+      padding: 16px 32px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    
+    .floating-btn button:hover {
+      background-color: #00796b;
+    } */
+    
+
+    .float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: black;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .float img {
+      max-width: 50%;
+      max-height: 50%;
+    }

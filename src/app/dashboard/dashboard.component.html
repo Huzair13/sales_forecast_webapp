@@ -1,0 +1,87 @@
+<!-- <p>dashboard works!</p>
+
+
+<div class="form-group">
+    <form (submit)="onSubmit()" enctype="multipart/form-data">
+        <input type="file" (change)="onFileSelect($event)" />
+        <button type="submit">Upload</button>
+    </form><br><br><br>
+</div><br>
+
+
+<button (click)="onLogout()">Logout</button>
+
+<ng-container *ngIf="jsonData">
+    <div>
+      <h2>Passenger Traffic Forecast</h2>
+      <canvas id="chart" width="800" height="400"></canvas>
+      <img [src]="imageSrc" alt="Forecast plot">
+    </div>
+</ng-container><br>
+
+<select [(ngModel)]="selectedOption">
+    <option value="weeks">Weekly</option>
+    <option value="months">Monthly</option>
+    <option value="years">Yearly</option>
+  </select><br><br>
+
+  <div>
+    <label for="number">Number</label>
+    <input id="number" type="number" [(ngModel)]="number">
+  </div> -->
+
+
+
+  
+<body>
+  <mat-progress-bar *ngIf="isLoading" mode="indeterminate" color="accent"></mat-progress-bar>
+  <div class="navbar">
+		<a style="font-family: Baskerville Italic;">SALES FORECASTING </a>
+    <a (click)="onLogout()" class="active">Logout</a>
+	</div>
+  <section class="hero">
+  </section>
+  <section class="upload">
+    <h2>Upload your sales data</h2>
+    <p>Select a CSV file with your sales data</p>
+    <label for="file-upload" class="file-upload-label">
+      <form (submit)="onSubmit()" enctype="multipart/form-data">
+        <img src="/assets/upload.png" alt="File Upload Icon">
+        <span>Choose a file</span>
+        <input id="file-upload" type="file" (change)="onFileSelect($event)">
+      </form>
+      </label>
+    <select [(ngModel)]="selectedOption">
+      <option value="years">Yearly</option>
+      <option value="months">Monthly</option>
+      <option value="weeks">Weakly</option>
+      <option value="days">Daily</option>
+    </select>
+    <input class="number" type="number" placeholder="Enter the number of weeks/months/years" [(ngModel)]="number">
+    <button type="submit" class="upload-button" (click)="onSubmit()">Upload</button>
+  </section>
+
+
+  <ng-container *ngIf="jsonData">
+    <div class="output" style="margin-top: 5px;">
+      <canvas id="chart"></canvas>
+      <h2 style="align-items: center; text-align: center; padding-top: 10px; padding-bottom: 10px; 
+      font-family: Copperplate, Papyrus, fantasy;">OUR FORECASTING !!!!!!</h2>
+      <img [src]="imageSrc" alt="Forecast plot">
+      <img [src]="imageSrc2" alt="Forecast plot2">
+    </div>
+  </ng-container><br>
+  
+  <!-- <pre>{{ jsonData | json }}</pre> -->
+
+  <!-- <div class="floating-btn">
+    <button>Click me!</button>
+  </div> -->
+
+  <button (click)="onDownload()" href="#" class="float" *ngIf="condition">
+    <img src="assets/download_icon2.png" alt="Download">
+  </button>
+
+</body>
+
+
